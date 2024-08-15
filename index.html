@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Crypto Monitor</h1>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Enter coin symbol (e.g., BTCUSDT)" oninput="fetchPrice()">
+                <button class="refresh-button" onclick="fetchPrice()">Refresh</button>
+            </div>
+            <div class="price-container">
+                <div class="price" id="price"></div>
+                <div class="price-icon" id="price-icon"></div>
+            </div>
+            <div class="update-time" id="update-time"></div>
+            <div class="error" id="error-message"></div>
+        </div>
+        <div class="chart-container">
+            <canvas id="chart" class="chart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
